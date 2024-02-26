@@ -1,0 +1,29 @@
+---
+import Header from '../components/Header.astro'
+
+interface HeroInnerProps {
+  title: string;
+  title2: string;
+  subtitle: string;
+  buttonText: string;
+  buttonLink: string;
+  backgroundColor: string;
+  backgroundImage: string;
+  animationClass: string;
+}
+
+const { title, title2, subtitle, buttonText, buttonLink } = Astro.props as HeroInnerProps;
+---
+
+
+<div class="hidden sm:mb-8 sm:flex sm:justify-start">
+    <div class="relative px-3 py-1 text-sm leading-6 text-white hover:ring-gray-900/20 uppercase"><span aria-hidden="true">&rarr;</span>
+        {subtitle} <a href="#" class="font-semibold text-white"></a>
+    </div>
+</div>
+<div class="lg:text-left">
+    <h1 class="text-4xl font-light tracking-tight text-white sm:text-6xl px-3">{title}<br/><b class="font-bold"> {title2}</b></h1>
+    <div class="mt-10 flex gap-x-6">
+        <a href={buttonLink} class="text-sm font-light leading-6 text-white px-3 uppercase hover:underline">{buttonText}</a>
+    </div>
+</div>

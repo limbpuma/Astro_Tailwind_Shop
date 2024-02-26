@@ -1,0 +1,51 @@
+---
+import Header from '../components/Header.astro'
+import HeroHandler from './HeroHandler.astro'
+interface HeroProps {
+  title: string;
+  title2: string;
+  subtitle: string;
+  buttonText: string;
+  buttonLink: string;
+  backgroundColor: string;
+  backgroundImage: string;
+ 
+}
+
+const { title, title2, subtitle, buttonText, buttonLink, backgroundColor, backgroundImage } = Astro.props as HeroProps;
+---
+
+<div class={`${backgroundColor} hero relative isolate px-6 lg:px-8 lg:flex lg:flex-col lg:items-start min-h-screen `}
+     style={`background-image: url('${backgroundImage}'); background-size: cover; background-position: center; background-repeat: no-repeat;`}>
+
+
+  <Header />
+    
+
+  <div class="lg:ml-[100px] max-w-2xl py-32 sm:py-48 lg:py-56 mx-auto lg:flex lg:flex-col lg:justify-start lg:items-start lg:text-left sm:justify-start">
+      <div class="hidden sm:mb-8 sm:flex sm:justify-start">
+          <div class="relative px-3 py-1 text-sm leading-6 text-white hover:ring-gray-900/20 uppercase"><span aria-hidden="true">&rarr;</span>
+              {subtitle} <a href="#" class="font-semibold text-white"></a>
+          </div>
+      </div>
+      
+      <div class="lg:text-left">
+          <h1 class="text-4xl font-light tracking-tight text-white sm:text-6xl px-3">{title}<br/><b class="font-bold"> {title2}</b></h1>
+          <div class="mt-10 flex gap-x-6">
+              <a href={buttonLink} class="text-sm font-light leading-6 text-white px-3 uppercase hover:underline">{buttonText}</a>
+          </div>
+      </div>
+      
+  </div>
+
+
+
+  
+  <div class="absolute right-0 top-1/2 transform -translate-y-1/2 z-50 hidden md:flex flex-col space-y-2 px-6 lg:px-8">
+    <HeroHandler/>
+  </div>
+
+  
+</div>
+
+

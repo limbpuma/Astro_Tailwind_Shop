@@ -1,0 +1,60 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import Hero from "../../components/Hero.astro"
+import Suscription from "../Suscription.astro"
+import ScrollHandler from "../../components/ScrollHandler.jsx"
+---
+
+<Layout title="Welcome to Astro.">
+  <div id="heroSection1" class="hero-section">
+	<Hero
+
+	backgroundColor="bg-red-600"
+	backgroundImage="/images/hero_1.png"
+  title="New Arrival Men's" 
+  title2="Collection" 
+  subtitle="summer 2024" 
+  buttonText="Discover more" 
+  buttonLink="#"
+  
+/></div>
+<div id="heroSection2" class="hero-section">
+<Hero 
+
+backgroundColor="bg-rose-300"
+backgroundImage="/images/hero_1.png"
+  title="New Arrival Women's" 
+  title2="Collection" 
+  subtitle="summer 2024" 
+  buttonText="Discover more" 
+  buttonLink="#"
+  
+/></div>
+<div id="heroSection3" class="hero-section">
+<Hero 
+
+backgroundColor="bg-blue-500"
+backgroundImage="/images/hero_1.png"
+title="New Arrival Kid's" 
+title2="Collection" 
+subtitle="summer 2024" 
+buttonText="Discover more" 
+buttonLink="#"
+
+/></div>
+<div class="hero-section">
+<Suscription/></div>
+
+
+<ScrollHandler client:load />
+</Layout>
+
+<style>
+
+</style>
+
+
+
+  
+  
+
