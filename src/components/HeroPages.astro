@@ -1,0 +1,46 @@
+---
+import Header from '../components/Header.astro'
+import HeroHandler from './HeroHandler.astro'
+interface HeroPagesProps {
+  title: string;
+  title2: string;
+  subtitle: string;
+  text: string;
+  buttonLink: string;
+  backgroundColor: string;
+  backgroundImage: string;
+ 
+}
+
+const { title, title2, subtitle, text, backgroundColor, backgroundImage } = Astro.props as HeroPagesProps;
+---
+
+<div class={`${backgroundColor} hero relative isolate px-4 sm:px-6 md:px-8 lg:flex lg:flex-col lg:items-start`}>
+    <Header />
+  
+    <div class="lg:ml-[100px] max-w-2xl py-24 sm:py-32 md:py-48 lg:py-56 mx-auto lg:flex lg:flex-col lg:justify-start lg:items-start lg:text-left">
+        <div class="mb-8 md:hidden flex justify-start">
+            <div class="relative px-3 py-1 text-xs sm:text-sm leading-6 text-white hover:ring-gray-900/20 uppercase"><span aria-hidden="true">&rarr;</span>
+                {subtitle} <a href="#" class="font-semibold text-white"></a>
+            </div>
+        </div>
+        
+        <div class="text-left">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white px-3">{title}<br/><b class="font-bold">{title2}</b></h1>
+            <div class="mt-8 md:mt-10 flex gap-x-4">
+                
+                <p class="text-xs sm:text-sm md:text-base font-light leading-6 text-white px-3 uppercase">{text}</p>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Contenedor de imagen ajustado -->
+    <div class="absolute right-0 top-12 bottom-0 z-50 hidden md:block overflow-hidden">
+        <img src={backgroundImage} alt="" class="h-full w-auto object-cover object-center">
+    </div>
+      
+</div>
+
+  
+
+
