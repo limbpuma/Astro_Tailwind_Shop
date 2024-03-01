@@ -1,81 +1,25 @@
 <header class="absolute inset-x-0 top-0 z-50">
-  <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-    <div class="flex lg:flex-1">
-      <a href="#" class="-m-1.5 p-1.5">
+  <nav class="flex items-center justify-between p-4 md:p-6 lg:px-8" aria-label="Global">
+    <div class="flex flex-1 justify-between">
+      <a href="#" class="p-1.5">
         <span class="sr-only">Your Company</span>
         <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
       </a>
     </div>
-    <div class="flex lg:hidden">
-      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white">
-        <span class="sr-only">Open main menu</span>
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
-      </button>
-    </div>
-    <div class="hidden lg:flex lg:gap-x-12 uppercase">
-      <a href="/" class="text-sm font-regular leading-6 text-white hover:text-gray-300">Home</a>
+    <div class="flex flex-wrap justify-end gap-4 md:gap-x-8 lg:gap-x-12 text-sm font-regular leading-6 text-white hover:text-gray-300 uppercase px-12">
+      <a href="/" class="hover:text-gray-300">Home</a>
       
       <div class="group relative">
-        <a href="#" class="text-sm font-regular leading-6 text-white hover:text-gray-300 inline-flex items-center">Categories</a>
-        <div class="absolute left-0 hidden group-hover:block bg-white shadow-lg mt-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+        <a href="#" class="inline-flex items-center hover:text-gray-300">Categories</a>
+        <div class="absolute left-0 z-10 hidden min-w-[200px] group-hover:block bg-white shadow-lg mt-2 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
           <a href="/category/women" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Women's</a>
           <a href="/category/men" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Men's</a>
           <a href="/category/jewelery" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Jewelry</a>
         </div>
       </div>
       
-      
-      
-      <a href="/" class="text-sm font-regular leading-6 text-white hover:text-gray-300">About</a>
-      <a href="/" class="text-sm font-regular leading-6 text-white hover:text-gray-300">Legal</a>
+      <a href="/" class="hover:text-gray-300">About</a>
+      <a href="/" class="hover:text-gray-300">Legal</a>
     </div>
-    <div class="hidden lg:flex lg:flex-1 lg:justify-end gap-4 ">
-      
-      <a href="#" class="text-sm regular leading-6 text-white hover:text-gray-300">
-        <img src="/icons/002-user.svg" alt="User" class="w-4 h-4 hover:scale-110 transition-transform"> <!-- Asegúrate de reemplazar 'user.svg' con el nombre correcto de tu archivo -->
-      </a>
-      <a href="#" class="text-sm regular leading-6 text-white hover:text-gray-300">
-        <img src="/icons/004-heart.svg" alt="Favorites" class="w-4 h-4 hover:scale-110 transition-transform"> <!-- Asegúrate de reemplazar 'heart.svg' con el nombre correcto de tu archivo -->
-      </a>
-      <a href="#" class="text-sm regular leading-6 text-white hover:text-gray-300">
-        <img src="/icons/003-shopping-bag.svg" alt="Cart" class="w-4 h-4 hover:scale-110 transition-transform"> <!-- Asumiendo que deseas un icono de carrito o algo similar, reemplázalo con el nombre correcto de tu archivo -->
-      </a>
-    </div>
-    
   </nav>
-  <!-- Mobile menu, show/hide based on menu open state. 
-
-  <div class="lg:hidden" role="dialog" aria-modal="true">
-    <div class="fixed inset-0 z-50"></div>
-    <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-      <div class="flex items-center justify-between">
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
-        </a>
-        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-          <span class="sr-only">Close menu</span>
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-      <div class="mt-6 flow-root">
-        <div class="-my-6 divide-y divide-gray-500/10">
-          <div class="space-y-2 py-6">
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
-          </div>
-          <div class="py-6">
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-  </div>-->
 </header>
