@@ -12,14 +12,14 @@ const truncateText = (text, limit) => text.length > limit ? `${text.substring(0,
       <img src="/icons/004-heart.svg" alt="Favorites" class="w-6 h-6 hover:scale-110">
     </a>
   </div>
-  <div class="card-body">
+  <div class="card-body bg-white text-gray-500">
     <h2 class="card-title">{truncateText(title, 20)}</h2>
     <p>{truncateText(description, 100)}</p>
     <div class="flex justify-between items-center">
       <div class="card-price">
         <h2 class="font-bold uppercase">Price: {price} $</h2>
       </div>
-      <button class="btn bg-white font-bold text-gray-500 hover:bg-gray-500 hover:text-white">Buy Now</button>
+      <button class="btn bg-white font-bold text-gray-500 hover:bg-gray-500 hover:text-white border-0">Buy Now</button>
     </div>
   </div>
 </div>

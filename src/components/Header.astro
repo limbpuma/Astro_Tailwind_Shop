@@ -1,7 +1,7 @@
 <header class="absolute inset-x-0 top-0 z-50">
   <nav class="flex items-center justify-between p-4 md:p-6 lg:px-8" aria-label="Global">
     <div class="flex flex-1 justify-between">
-      <a href="#" class="p-1.5">
+      <a href="/" class="p-1.5">
         <span class="sr-only">Your Company</span>
         <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
       </a>
@@ -11,7 +11,8 @@
       
       <div class="group relative">
         <a href="#" class="inline-flex items-center hover:text-gray-300">Categories</a>
-        <div class="absolute left-0 z-10 hidden min-w-[200px] group-hover:block bg-white shadow-lg mt-2 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+        <!-- Ajuste el mt- a un valor negativo para reducir el espacio -->
+        <div class="absolute left-0 z-10 hidden min-w-[200px] group-hover:block bg-white shadow-lg mt-[-0.2rem] transition-opacity duration-300 opacity-0 group-hover:opacity-100">
           <a href="/category/women" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Women's</a>
           <a href="/category/men" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Men's</a>
           <a href="/category/jewelery" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Jewelry</a>
